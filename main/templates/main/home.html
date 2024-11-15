@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block additional_head %}
+    <style>
+        .recipe {
+            background-color: #FFFDD0;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .recipe h3 {
+            font-size: 24px;
+        }
+
+        .recipe p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .recipe a {
+            text-decoration: none;
+            background-color: #A52A2A;
+            color: #FFFDD0;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .recipe img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+
+        /* Стиль для формы поиска */
+        .search-form {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            background-color: #A52A2A;
+            color: #FFFDD0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #8B1A1A;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>The newest recipes:</h2>
+
+        <!-- Форма поиска -->
+        <div class="search-form">
+            <form method="get" action="{% url 'main:search_recipe' %}">
+                <input type="text" name="search" placeholder="Enter title or ingredients..." value="{{ form.data.search }}">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        {% for dish in page_obj %}
+            <div class="recipe">
+                <h3>{{ dish.dish_title }}</h3>
+                <img src="{{ dish.dish_image.url }}" alt="{{ dish.dish_title }}">
+                <p>{{ dish.dish_ingredients|safe }}</p>
+                <a href="{% url 'main:detail_recipe' pk=dish.pk %}">View Recipe</a>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+    

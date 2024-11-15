@@ -1,0 +1,56 @@
+/* CSS for your create_recipe form */
+.recipe-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.recipe-form h1 {
+    font-size: 24px;
+    background-color: #A52A2A;
+    color: #FFFDD0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.recipe-form p {
+    margin: 10px 0;
+}
+
+.recipe-form label {
+    display: inline-block;
+    width: 200px; /* Adjust label width for better alignment */
+    font-weight: bold;
+}
+
+.recipe-form input[type="text"],
+.recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #A52A2A;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.recipe-form button[type='submit'] {
+    background-color: #A52A2A;
+    color: #FFFDD0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Highlight the input field on focus */
+.recipe-form input[type="text"]:focus,
+.recipe-form textarea:focus {
+    border-color: #FF6347;
+}
+

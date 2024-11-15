@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_head%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/recipe_detail.css' %}">
+{%endblock%}
+{% block content %}
+    <section>
+        <div class="recipe">
+            <h2>{{dish.title}}</h2>
+            <img src='{{dish.dish_image.url}}' alt='{{dish.dish_title}}'>
+            <h3>{{ dish.dish_ingredients|safe}}</h3>
+            <p>{{ dish.dish_cooking_process|safe }}</p>
+        </div>
+    </section>
+{% endblock %}

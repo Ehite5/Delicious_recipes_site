@@ -1,0 +1,18 @@
+footer {
+    background-color: #444;
+    color: #FFFDD0;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px;
+}
+
+.copyright {
+    font-size: 12px;
+}

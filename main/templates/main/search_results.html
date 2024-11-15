@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block additional_head %}
+    <link rel="stylesheet" href="{% static 'css/search_recipe.css' %}">
+{% endblock %}
+{% block content %}
+<body>
+    <title>Search Results</title>
+    <div class="container">
+    <h1>Recipe Search</h1>
+    
+    <div class="search-form">
+        <form method="get" action="{% url 'main:search_recipe' %}">
+            <input type="text" name="search" placeholder="Enter title or ingredients..." value="{{ form.data.search }}">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <h2>Search Results</h2>
+    <div class="dish-list">
+        {% if page_obj %}
+            {% for dish in page_obj %}
+            <div class="recipe">
+                <h3>{{ dish.dish_title }}</h3>
+                <img src="{{ dish.dish_image.url }}" alt="{{ dish.dish_title }}">
+                <p>{{ dish.dish_ingredients|safe }}</p>
+                <a href="{% url 'main:detail_recipe' pk=dish.pk %}">View Recipe</a>
+            </div>
+            {% empty %}
+                <p>No recipes found. Please try another search.</p>
+            {% endfor %}
+        {% else %}
+            <p>Enter a search term to find recipes.</p>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

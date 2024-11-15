@@ -1,0 +1,20 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicious Recipes - Your source for mouthwatering dishes">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Delicious Recipes</title>
+</head>
+<body>
+    <header>
+        <h1>Delicious Recipes</h1>
+        <p>Your source for mouthwatering dishes</p>
+    </header>
+    <nav>
+        <a href = {% url 'main:homepage' %}>Home</a>
+        <a href = {% url 'main:all_recipes' %}>Recipes</a>
+        <a href = {% url 'main:aboutpage' %}>About Us</a>
+        <a href = {% url 'main:add_recipe' %}>Add new recipe</a>
+    </nav>
+</body>

@@ -1,0 +1,73 @@
+/* CSS for about.css */
+
+/* Header */
+.about-header {
+    background-color: #A52A2A;
+    color: #FFFDD0;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #444;
+}
+
+.about-header h1 {
+    font-size: 36px;
+}
+
+/* About Us Content */
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.about-info, .project-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border: 2px solid #A52A2A;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about-info h2, .project-info h2 {
+    font-size: 24px;
+    color: #A52A2A;
+    margin-bottom: 10px;
+}
+
+.about-info p, .project-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    font-style: italic;
+    color: #555;
+}
+
+/* Recipe Description */
+.recipe-description {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.recipe-description h2 {
+    font-size: 28px;
+    color: #A52A2A;
+    margin-bottom: 10px;
+}
+
+.recipe-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,57 @@
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0;
+}
+
+header {
+    background-color: #A52A2A;
+    color: #FFFDD0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+nav {
+    text-align: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFDD0;
+    margin: 10px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border-radius: 5px;
+}
+
+.recipe {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border-radius: 5px;
+}
+
+/* Define specific styles for links within .recipe */
+.recipe a {
+    color: #A52A2A;
+    text-decoration: none;
+}
+
+/* Define styles for links on hover */
+.recipe a:hover {
+    text-decoration: underline;
+}

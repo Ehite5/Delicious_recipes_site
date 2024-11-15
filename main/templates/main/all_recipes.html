@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%load static%}
+{% block additional_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all_recipes.css' %}">
+{% endblock %}
+{%block content%}
+    <section>
+        <h1>All library of recipes</h1>
+        <div class="search-form">
+            <form method="get" action="{% url 'main:search_recipe' %}">
+                <input type="text" name="search" placeholder="Enter title or ingredients..." value="{{ form.data.search }}">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+
+        {% for dish in page_obj %}
+            <div class="recipe">
+                <h3>{{ dish.dish_title }}</h3>
+                <img src='{{dish.dish_image.url}}' alt='{{dish.dish_title}}'>
+                <p>{{ dish.dish_ingredients|safe }}</p>
+                <a href={% url 'main:detail_recipe' pk=dish.pk %}>View Recipe</a>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
