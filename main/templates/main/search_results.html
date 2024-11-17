@@ -5,9 +5,10 @@
 {% endblock %}
 {% block content %}
 <body>
-    <title>Search Results</title>
-    <div class="container">
-    <h1>Recipe Search</h1>
+    <div class="header-container">
+        <div class="header">All recipes:</div>
+        <div class="description">Our entire collection of recipes is at your disposal</div>
+    </div>
     
     <div class="search-form">
         <form method="get" action="{% url 'main:search_recipe' %}">

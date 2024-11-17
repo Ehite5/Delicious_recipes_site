@@ -1,72 +1,16 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block additional_head %}
-    <style>
-        .recipe {
-            background-color: #FFFDD0;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-
-        .recipe h3 {
-            font-size: 24px;
-        }
-
-        .recipe p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .recipe a {
-            text-decoration: none;
-            background-color: #A52A2A;
-            color: #FFFDD0;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        .recipe img {
-            max-width: 100%;
-            height: auto;
-            max-height: 200px;
-        }
-
-        /* Стиль для формы поиска */
-        .search-form {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .search-form input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        .search-form button {
-            padding: 10px 20px;
-            background-color: #A52A2A;
-            color: #FFFDD0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .search-form button:hover {
-            background-color: #8B1A1A;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 {% endblock %}
 
 {% block content %}
     <section>
-        <h2>The newest recipes:</h2>
+        <div class="header-container">
+            <div class="header">The newest recipes:</div>
+            <div class="description">The newest recipes from the world of cookery that we have selected for you</div>
+        </div>
+        
 
         <!-- Форма поиска -->
         <div class="search-form">

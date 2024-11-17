@@ -38,40 +38,40 @@
 }
 
 .recipe {
-    margin: 20px;
-    padding: 20px;
     background-color: #FFFDD0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .recipe h3 {
     font-size: 24px;
-    margin-bottom: 10px;
 }
 
 .recipe p {
-    margin: 10px;
-}
-
-.recipe img {
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .recipe a {
     text-decoration: none;
-    color: #A52A2A;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
+    background-color: #A52A2A;
+    color: #FFFDD0;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.recipe a:hover {
-    text-decoration: underline;
+.recipe img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+/* Стиль для формы поиска */
+.search-form {
+    margin: 20px 0;
+    text-align: center;
 }
 
 .search-form input[type="text"] {

@@ -17,7 +17,7 @@ def homepage(request):
     return render(request = request, 
                   template_name = 'main/home.html',
                   context = {'page_obj':page_obj,
-                             'request': request})
+})
 
 def date(request):
     current_datetime = datetime.today()

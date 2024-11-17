@@ -1,11 +1,9 @@
-/* Container for the entire search page */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Recipe item styles */
 .recipe {
     margin: 20px 0;
     padding: 20px;
@@ -79,4 +77,51 @@
 
 .search-form button:hover {
     background-color: #8B1A1A;
+}
+
+.header-container {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #A52A2A;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-container:hover {
+    transform: scale(1.05);
+}
+
+.header-container .description {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+    color: #333;
+    background-color: #FFFDD0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    width: 100%;
+    text-align: center;
+}
+
+.header-container:hover .description {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.recipe {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFFDD0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }

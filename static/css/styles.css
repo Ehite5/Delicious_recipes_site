@@ -45,13 +45,11 @@ section {
     border-radius: 5px;
 }
 
-/* Define specific styles for links within .recipe */
 .recipe a {
     color: #A52A2A;
     text-decoration: none;
 }
 
-/* Define styles for links on hover */
 .recipe a:hover {
     text-decoration: underline;
 }

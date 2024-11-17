@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from . import views
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -28,7 +28,7 @@ urlpatterns = [
     path('recepies/', views.AllRecipes, name='all_recipes'),
     path('recipe/<int:pk>/', views.RecipeDetailView.as_view(), name='detail_recipe'),
     path('recipe/search/results', views.SearchRecipe, name='search_recipe'),
-    
+
 ]
 
 if settings.DEBUG:
