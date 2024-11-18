@@ -12,9 +12,15 @@
         <p>Your source for mouthwatering dishes</p>
     </header>
     <nav>
-        <a href = {% url 'main:homepage' %}>Home</a>
-        <a href = {% url 'main:all_recipes' %}>Recipes</a>
-        <a href = {% url 'main:aboutpage' %}>About Us</a>
-        <a href = {% url 'main:add_recipe' %}>Add new recipe</a>
+        <a href="{% url 'main:homepage' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+        <a href="{% url 'main:all_recipes' %}" class="{% if request.path == '/recipes/' %}active{% endif %}">Recipes</a>
+        <a href="{% url 'main:aboutpage' %}" class="{% if request.path == '/about/' %}active{% endif %}">About Us</a>
+        <a href="{% url 'main:add_recipe' %}" class="{% if request.path == '/recipes/add/' %}active{% endif %}">Add new recipe</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'users:logout' %}" class="button logout-button {% if request.path == '/users/logout/' %}active{% endif %}">Logout</a>
+        {% else %}
+            <a href="{% url 'users:login' %}" class="button login-button {% if request.path == '/users/login/' %}active{% endif %}">Sign in</a>
+            <a href="{% url 'users:register' %}" class="button register-button {% if request.path == '/users/register/' %}active{% endif %}">Sign Up</a>
+        {% endif %}
     </nav>
 </body>

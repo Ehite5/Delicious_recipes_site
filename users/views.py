@@ -12,10 +12,10 @@ def Register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account for {username} has been created successfully!')
             return redirect('users:login')
-        else:
-            form = UserRegisterForm()
-            return render(request=request,
-                            template_name='users/register.html',
-                            context={
-                                'form': form,
-                            })
+    else:
+        form = UserRegisterForm()
+        return render(request=request,
+                        template_name='users/register.html',
+                        context={
+                            'form': form,
+                        })
